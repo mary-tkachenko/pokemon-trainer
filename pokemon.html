@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon It!</title>
+        <link rel="stylesheet" type="text/css" href="pokemon.css">
+        <script type="text/javascript" src="pokemon.js"></script> 
+        <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="staging_area">
+
+            <!-- Name and id of pokemon. -->
+            <div id="pokemon_id"> </div>
+
+            <!-- Info about pokemon. -->
+            <div id="information">
+                <ul>
+                    <li id="height">Height: <span></span></li>
+                    <li id="weight">Weight: <span></span></li>
+                    <li id="hp">HP: <span></span></li>
+                    <li id="attack">Attack: <span></span></li>
+                    <li id="defense">Defense: <span></span></li>
+                    <li id="abilities">Abilities: <span></span></li>
+                    <li id="type">Type: <span></span></li>
+                </ul>
+            </div>
+
+            <!-- Space of pokemon images -->
+            <!-- <div id="pokespace"> -->
+            <!-- Pokemon image -->
+            <div id="pokemon_itself">
+                <img src="media/coffee-ring-5.png" id="mandala">
+                <div id="poke_image_place"></div>
+            </div>
+
+            <!-- Symbols of my pokemons -->
+            <div id="my_symbols2">
+                <div id="bee2"><img src="media_welcome_page/bee.png"></div>
+                <div id="pineapple2"><img src="media_welcome_page/pineapple.png"></div>
+                <div id="magnet2"><img src="media_welcome_page/magnet.png"></div>
+            </div>
+
+            <!-- Search part. -->
+                <div id="search">
+                    <input type="text" id="name_of_pokemon" name="name_of_pokemon" placeholder="Enter pokemon name"/>
+                    <button type="button" id="button" ><img src="https://cdn.vrex.io/images/magnifying_glass_gray.svg"></button>
+                </div>
+
+            <!-- Loading gif -->
+                <div id="loading"><img src="media/pokeball_gif.gif"></div>
+        </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+       
+    </body>
+</html>
