@@ -1,0 +1,90 @@
+
+#welcome_container{
+	background-color: black;
+	width: 100%;
+	height: 800px;
+
+}
+#my_symbols {
+	display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+img {
+	height: 150px;
+	filter: invert(100%);
+	/*filter: drop-shadow(16px 16px 20px orange) invert(75%);*/
+	opacity: 0.3;
+}
+
+#bee, #pineapple, #magnet{
+  animation: spinCube 4s infinite ease-in-out;
+}
+
+@keyframes spinCube {
+    0% { transform: translateZ(-100px) rotateX(  0deg) rotateY(  0deg); }
+  100% { transform: translateZ(-100px) rotateX(0deg) rotateY(360deg); }
+}
+
+
+#welcome {
+	font-size: 25px;
+	padding-top: 100px;
+	text-align: center;
+	color: white;
+	font-family: 'Aldrich', sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .3em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .3em; /* Adjust as needed */
+  animation: 
+    typing 10s steps(130, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+#pokeball {
+	margin: 181px 644px;
+}
+
+
+#ring {
+	filter: drop-shadow(16px 16px 20px orange) invert(75%);
+	animation: spin 10s infinite; 
+	position: absolute;
+	height: 400px;
+    top: 402px;
+    left: 530px;
+}
+
+@keyframes spin {
+ 	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(359deg);
+		}
+	}
+}
+
+
+#press_button {
+	color: white;
+}
+
+
+

@@ -1,0 +1,142 @@
+body {
+  background-color: black;
+}
+
+#staging_area {
+  color: white;
+  font-family: 'Aldrich', sans-serif;
+}
+
+#pokemon_id {
+  margin-left: 920px;
+  margin-top: 76px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#information {
+  margin-left: 166px;
+  margin-top: 42px;
+  position: absolute;
+}
+
+#information span {
+  color: #99b2df;
+}
+
+ul li img {
+  height: 20px;
+  filter: invert(100%);
+  margin-left: 31px;
+}
+
+li {
+  padding: 15px;
+}
+
+
+#pokemon_itself img {
+  height: 255px;
+  margin-left: 900px;
+  margin-top: -129px;
+}
+
+#pokemon_itself #mandala {
+  position: absolute;
+  height: 400px;
+  top: 251px;
+  left: -117px;
+  filter: drop-shadow(16px 16px 20px orange) invert(75%);
+  animation: spin 10s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#poke_image_place img {
+  position: absolute;
+  margin-top: 102px;
+  margin-left: 854px;
+}
+
+
+#my_symbols2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 540px;
+  margin-left: 781px;
+  width: 371px;
+  filter: invert(100%);
+  filter: drop-shadow(16px 16px 20px orange) invert(75%);
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+img {
+  height: 50px;
+}
+
+
+#search img {
+  height: 47px;
+  opacity: 0.4;
+}
+
+input {
+  margin-left: 184px;
+  filter: drop-shadow(0px 2px 20px orange) invert(75%);
+  height: 20px;
+  border-style: none;
+  background: transparent;
+  outline: none;
+}
+
+
+#button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.hide {
+  visibility: hidden;
+}
+
+
+#loading img {
+  position: absolute;
+  height: 332px;
+  margin-top: -566px;
+  margin-left: 846px;
+  filter: drop-shadow(16px 16px 20px orange) invert(75%);
+}
+
+.remove {
+  display: none;
+}
+
+
+/*#pokemon_id {
+  margin-left: 920px;
+  margin-top: 76px;
+  color: white;
+  text-transform: uppercase;
+}*/
+
+
+
+
+
+
+
+
+
