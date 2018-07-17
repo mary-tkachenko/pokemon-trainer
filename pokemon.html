@@ -3,8 +3,12 @@
     <head>
         <title>Pokemon It!</title>
         <link rel="stylesheet" type="text/css" href="pokemon.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
         <script type="text/javascript" src="pokemon.js"></script> 
-        <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">   
     </head>
 
     <body>
@@ -47,11 +51,14 @@
                     <button type="button" id="button" ><img src="https://cdn.vrex.io/images/magnifying_glass_gray.svg"></button>
                 </div>
 
-            <!-- Loading gif -->
-                <div id="loading"><img src="media/pokeball_gif.gif"></div>
-        </div>
+                 <div class="progress">
+            <div class="indeterminate" style="opacity: 0.4;"></div>
+               </div>
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <!-- Loading gif -->
+            <div id="loading"><img src="media/pokeball_gif.gif"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
        
     </body>
 </html>

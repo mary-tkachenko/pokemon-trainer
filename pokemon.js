@@ -1,3 +1,6 @@
+//Where everything is happening.
+window.addEventListener('load', () => {
+
 // Constructer for class Pokemon.
 
 class Pokemon {
@@ -109,8 +112,6 @@ function search(search_value) {
 
 
 
-//Where everything is happening.
-window.addEventListener('load', () => {
 // Find value from search to pass into api.
     document.getElementById("button").addEventListener("click", function(event) {
         const search_value = document.getElementById('name_of_pokemon').value.toLowerCase();
