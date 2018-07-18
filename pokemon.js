@@ -135,7 +135,5 @@ displayPokemon = (pokemonToDisplay) => {
         search('magneton');
     });    
 
-
 })
-
 
