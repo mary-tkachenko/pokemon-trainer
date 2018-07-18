@@ -12,7 +12,7 @@ body {
       margin-left: 166px;
       margin-top: 42px;
       position: absolute; }
-      body #staging_area #information span {
+      body #staging_area #information #information span {
         color: #99b2df; }
       body #staging_area #information ul li img {
         height: 20px;
@@ -56,12 +56,15 @@ body {
       height: 47px;
       opacity: 0.4; }
     body #staging_area input {
-      margin-left: 184px;
+      margin-left: 60px;
       filter: drop-shadow(0px 2px 20px orange) invert(75%);
       height: 20px;
       border-style: none;
       background: transparent;
-      outline: none; }
+      outline: none;
+      position: absolute;
+      margin-top: 42px;
+      font-size: 26px; }
     body #staging_area #button {
       background: transparent;
       border: none;
@@ -72,7 +75,7 @@ body {
     body #staging_area #loading img {
       position: absolute;
       height: 332px;
-      margin-top: -620px;
+      margin-top: -594px;
       margin-left: 846px;
       filter: drop-shadow(16px 16px 20px orange) invert(75%); }
     body #staging_area .remove {
