@@ -19,12 +19,12 @@ class Pokemon {
 }
 
 //Function to update  pokemoncharacteristic.
-function updateCharacteristic(characteristicId, value) {
+updateCharacteristic = (characteristicId, value) => {
     document.getElementById(characteristicId).getElementsByTagName('span')[0].innerText = value;
 }
 
 //Function to display a pokemon.
-function displayPokemon(pokemonToDisplay) {
+displayPokemon = (pokemonToDisplay) => {
     document.getElementById('pokemon_id').innerText = pokemonToDisplay.name + ' | #' + pokemonToDisplay.id;
 
 //Helps to change pokemon images
@@ -52,7 +52,7 @@ function displayPokemon(pokemonToDisplay) {
 }
 
 //Function to search throught api.
-function search(search_value) {
+ search = (search_value) => {
 //Search value is the input which is name of pokemon.
     const search_by_name_link = 'https://pokeapi.co/api/v2/pokemon/' + search_value + '/';
 //Removing loading default gif.
