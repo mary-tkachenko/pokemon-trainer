@@ -116,8 +116,8 @@ displayPokemon = (pokemonToDisplay) => {
     document.getElementById("button").addEventListener("click", function(event) {
         const search_value = document.getElementById('name_of_pokemon').value.toLowerCase();
         search(search_value);
-    //     document.getElementById('name_of_pokemon').getElementsByTagName('input').value = '';
-    // }); 
+        document.getElementById('name_of_pokemon').getElementsByTagName('input').value = '';
+    }); 
 
 
 // If value is bee.
