@@ -53,6 +53,7 @@ const displayPokemon = (pokemonToDisplay) => {
 
 //Function to search throught api.
  const search = (search_value) => {
+     document.getElementById("name_of_pokemon").value = "";
 //Search value is the input which is name of pokemon.
     const search_by_name_link = 'https://pokeapi.co/api/v2/pokemon/' + search_value + '/';
 //Removing loading default gif.
