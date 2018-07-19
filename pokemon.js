@@ -2,7 +2,6 @@
 window.addEventListener('load', () => {
 
 // Constructer for class Pokemon.
-
 class Pokemon {
     constructor(id, name, image, height, weight, hp, attack, defense, abilities, type) {
         this.id = id;
@@ -18,16 +17,16 @@ class Pokemon {
     }
 }
 
-//Function to update  pokemoncharacteristic.
+// Function to update pokemonc haracteristic.
 const updateCharacteristic = (characteristicId, value) => {
     document.getElementById(characteristicId).getElementsByTagName('span')[0].innerText = value;
 }
 
-//Function to display a pokemon.
+// Function to display a pokemon.
 const displayPokemon = (pokemonToDisplay) => {
     document.getElementById('pokemon_id').innerText = pokemonToDisplay.name + ' | #' + pokemonToDisplay.id;
 
-//Helps to change pokemon images
+    // Helps to change pokemon images
     const imgPlaceholder = document.getElementById('poke_image_place');
     const existingImages = imgPlaceholder.getElementsByTagName('img');
     if (existingImages.length === 0) {
@@ -38,7 +37,7 @@ const displayPokemon = (pokemonToDisplay) => {
         existingImages[0].setAttribute("src", pokemonToDisplay.image);
     }
 
-//Function to fill charactiristic holders.
+    // Function to fill charactiristic holders.
     updateCharacteristic('height', pokemonToDisplay.height);
     updateCharacteristic('weight', pokemonToDisplay.weight);
     updateCharacteristic('hp', pokemonToDisplay.hp);
@@ -46,26 +45,30 @@ const displayPokemon = (pokemonToDisplay) => {
     updateCharacteristic('defense', pokemonToDisplay.defense);
     updateCharacteristic('abilities', pokemonToDisplay.abilities.join(', '));
     updateCharacteristic('type', pokemonToDisplay.type.join(', '));
-//Remove hiding. Adding remove.
+    // Remove hiding. Adding remove.
     existingImages[0].classList.remove('hide');
     document.getElementById('loading').classList.add('remove');
 }
 
 //Function to search throught api.
- const search = (search_value) => {
-     document.getElementById("name_of_pokemon").value = "";
-//Search value is the input which is name of pokemon.
+const search = (search_value) => {
+    document.getElementById("name_of_pokemon").value = "";
+    // Search value is the input which is name of pokemon.
     const search_by_name_link = 'https://pokeapi.co/api/v2/pokemon/' + search_value + '/';
-//Removing loading default gif.
+    
+    // Removing loading default gif.
     document.getElementById('loading').classList.remove('remove');
-//
+
     const existingImages = document.getElementById('poke_image_place').getElementsByTagName('img');
     if (existingImages.length > 0) {
         existingImages[0].classList.add('hide');
     }
 
     axios.get(search_by_name_link).then((pokemonReponse) => {
-//Axios request and assigning results.
+         document.getElementById('information').classList.remove('hide');
+         document.getElementById('error').classList.add('remove');
+         document.getElementById('loading').classList.remove('hide');
+    //Axios request and assigning results.
         const data = pokemonReponse.data;
         //console.log(data);
         const id = data.id;
@@ -85,14 +88,14 @@ const displayPokemon = (pokemonToDisplay) => {
         for (let j = 0; j < data.types.length; j++) {
             types_array.push(data.types[j].type.name);
         }
-//Axios request for image
+        // Axios request for image
         const image_api = data.forms[0].url;
         axios.get(image_api).then((imageResponse) => {
 
             const data_img = imageResponse.data;
             image_link = data_img.sprites.front_default;
 
-//Creating instance of pokemon.
+            // Creating instance of pokemon.
             const myPokemon = new Pokemon(
                 id,
                 name,
@@ -105,36 +108,48 @@ const displayPokemon = (pokemonToDisplay) => {
                 abilities_array,
                 types_array,
             );
-//Showing this pokemon.
+            // Showing this pokemon.
             displayPokemon(myPokemon);
+             ;
+
         })    
-    });
+    })
+    .catch(function (error) {
+    document.getElementById('error').classList.remove('remove');
+    document.getElementById('pokemon_id').innerText = "WHO?";
+    document.getElementById('information').classList.add('hide');
+    document.getElementById('loading').classList.add('hide');
+
+  });
 }
 
 
 
 // Find value from search to pass into api.
-    document.getElementById("button").addEventListener("click", function(event) {
-        const search_value = document.getElementById('name_of_pokemon').value.toLowerCase();
-        search(search_value);
-        document.getElementById('name_of_pokemon').getElementsByTagName('input').value = '';
-    }); 
+document.getElementById("button").addEventListener("click", function(event) {
+    const search_value = document.getElementById('name_of_pokemon').value.toLowerCase();
+    search(search_value);
+    document.getElementById('name_of_pokemon').getElementsByTagName('input').value = '';
+}); 
 
 
 // If value is bee.
-    document.getElementById("bee2").addEventListener("click", function(event) {
-        search('combee');
-    }); 
+document.getElementById("bee2").addEventListener("click", function(event) {
+    search('combee');
+}); 
 
 // If value is pineapple.
-    document.getElementById("pineapple2").addEventListener("click", function(event) {
-        search('exeggutor');
-    }); 
+document.getElementById("pineapple2").addEventListener("click", function(event) {
+    search('exeggutor');
+}); 
 
- // If value is magnet.
-    document.getElementById("magnet2").addEventListener("click", function(event) {
-        search('magneton');
-    });    
+// If value is magnet.
+document.getElementById("magnet2").addEventListener("click", function(event) {
+    search('magneton');
+});    
+
 
 })
+
+
 
