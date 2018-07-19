@@ -80,7 +80,7 @@ body {
     body #staging_area #loading img {
       position: absolute;
       height: 332px;
-      margin-top: -594px;
+      margin-top: -608px;
       margin-left: 846px;
       filter: drop-shadow(16px 16px 20px orange) invert(75%); }
     body #staging_area .remove {
