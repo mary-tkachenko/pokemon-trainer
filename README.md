@@ -24,5 +24,7 @@ Mary Tkachenko - software engineer;</br>
 Three Headed Trainer - inspiration;</br>
 Combee - kitchen;</br>
 Magneton - technical support;</br>
-Exeguttor - landlord.</br>
+Exeguttor - landlord;</br>
+Grandfather of THT - error handler.</br>
+
 <p><img src="https://media.giphy.com/media/w5uvIOfxIsdX2/giphy.gif"></p>
