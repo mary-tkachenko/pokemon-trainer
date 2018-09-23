@@ -6,7 +6,7 @@ His students-pokemons are:
 <img src="https://78.media.tumblr.com/db4f117b9f94b4cfd2626cc042cba584/tumblr_om1yzkEphd1tdblgdo1_r1_500.gif">
 
 <p><strong> MAGNETON </strong></p>
-<img src="https://pa1.narvii.com/6012/a2829830716e1775a6d05dbe1eaab26846b71335_hq.gif">
+<img src="https://vignette.wikia.nocookie.net/powerlisting/images/e/ed/Magneton_spark.gif/revision/latest?cb=20170709021326">
 
 <p><strong> EXEGUTTOR </strong></p>
 <img src="http://gifimage.net/wp-content/uploads/2017/11/exeggutor-gif-7.gif">
